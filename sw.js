@@ -1,7 +1,7 @@
 // Service worker: network-first (you always get the newest version when online),
 // falls back to the cached copy so the app still opens offline. Data is never cached here —
 // it lives in your data file.
-const CACHE = 'khalid-erp-v1';
+const CACHE = 'khalid-erp-v2';
 const SHELL = ['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/icon-maskable-512.png'];
 
 self.addEventListener('install', e => {

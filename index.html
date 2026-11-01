@@ -755,9 +755,9 @@ const I18N = {
     langToggle:'EN'
   },
   en:{
-    brand:'Khalid Othman', brandSub:'Business Management', loginTitle:'Sign In',
+    brand:'Khalid Osman', brandSub:'Business Management', loginTitle:'Sign In',
     username:'Username', usernamePh:'Enter your username', password:'Password', passwordPh:'Enter your password',
-    loginBtn:'Login →', loginErr:'Incorrect username or password', loginFooter:'Khalid Othman IT Systems & Software Design — Abu Dhabi',
+    loginBtn:'Login →', loginErr:'Incorrect username or password', loginFooter:'Khalid Osman IT Systems & Software Design — Abu Dhabi',
     navHome:'Home', navDashboard:'Dashboard', navTasks:'Tasks & Orders', navClients:'Client Records',
     navInvoices:'Invoices', navQuotes:'Quotes', navExpenses:'Expenses', navEmployees:'Employees',
     navReports:'Reports', navSettings:'Settings', logout:'Logout', logoutConfirm:'Do you want to log out?',
@@ -1472,8 +1472,8 @@ function viewDoc(type,i){
   const label=type==='invoice'?t('invoice'):t('quote');
   currentViewDoc={type,i,label,ref:d.ref,clientName:c.name,clientPhone:c.phone,grandGetter:null};
   const st=DB.get('settings')||{};
-  const compName=st.companyName||(lang==='ar'?'خالد عثمان لتصميم نظم وبرامج الحاسب الآلي':'Khalid Othman IT Systems & Software Design');
-  const compPhone=st.phone||'+971 54 225 3243';
+  const compName=st.companyName||(lang==='ar'?'خالد عثمان لتصميم نظم وبرامج الحاسب الآلي':'Khalid Osman IT Systems & Software Design');
+  const compPhone=st.phone||'+971 54 225 3243 / 056 149 4181';
   const compEmail=st.email||'khalidothman870@gmail.com';
   const compAddress=st.address||(lang==='ar'?'أبوظبي، الإمارات العربية المتحدة':'Abu Dhabi, United Arab Emirates');
   const vatPct=st.vat!=null?st.vat:5;
@@ -1663,8 +1663,8 @@ function printDoc(){
   if(!d){toast(lang==='ar'?'المستند غير موجود':'Document not found','error');return;}
   const c = clients.find(x=>x.id===d.clientId)||{name:'—',address:'',phone:'',email:''};
   const st = DB.get('settings')||{};
-  const compName = st.companyName||(lang==='ar'?'خالد عثمان لتصميم نظم وبرامج الحاسب الآلي':'Khalid Othman IT Systems & Software Design');
-  const compPhone = st.phone||'+971 54 225 3243';
+  const compName = st.companyName||(lang==='ar'?'خالد عثمان لتصميم نظم وبرامج الحاسب الآلي':'Khalid Osman IT Systems & Software Design');
+  const compPhone = st.phone||'+971 54 225 3243 / 056 149 4181';
   const compEmail = st.email||'khalidothman870@gmail.com';
   const compAddress = st.address||(lang==='ar'?'أبو ظبي، الإمارات العربية المتحدة':'Abu Dhabi, United Arab Emirates');
   const compLicense = st.license||'CN-6717598';
@@ -1891,7 +1891,7 @@ table.items thead th.c-main{text-align:${isAR?'right':'left'}}
     </div>
     <div class="ibox">
       <div class="lab">${isAR?'من / المورد':'From / Supplier'}</div>
-      <div class="val">${isAR?'خالد عثمان':'Khalid Othman'}</div>
+      <div class="val">${isAR?'خالد عثمان':'Khalid Osman'}</div>
     </div>
     <div class="ibox">
       <div class="lab">${isAR?'عنوان العميل':'Client Address'}</div>
@@ -3070,7 +3070,7 @@ function renderSettings(){
       </div>
       <div class="form-row cols2">
         <div class="form-group"><label>رقم الهاتف / واتساب</label>
-          <input type="text" id="st-phone" value="${saved.phone||'+971 54 225 3243'}" placeholder="+971..."></div>
+          <input type="text" id="st-phone" value="${saved.phone||'+971 54 225 3243 / 056 149 4181'}" placeholder="+971..."></div>
         <div class="form-group"><label>البريد الإلكتروني</label>
           <input type="text" id="st-email" value="${saved.email||'khalidothman870@gmail.com'}" placeholder="email@..."></div>
       </div>
